@@ -18,10 +18,10 @@ class Curso {
         if (aluno.quantidadeFaltas > this.faltasMaximas) {
             return false;
         }
-        if (aluno.calcularMedia() < this.notaAprovacao) {
+        else if (aluno.calcularMedia() < this.notaAprovacao) {
             return false;
         }
-        if (aluno.quantidadeFaltas === this.faltasMaximas) {
+        else if (aluno.quantidadeFaltas === this.faltasMaximas) {
             return aluno.calcularMedia() > this.notaAprovacao * 1.1;
         }
         return true;
